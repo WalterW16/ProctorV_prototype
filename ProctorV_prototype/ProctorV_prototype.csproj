@@ -123,6 +123,12 @@
     <Compile Include="User.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="UserRepository.cs" />
+    <EmbeddedResource Include="CandidateMainForm.resx">
+      <DependentUpon>CandidateMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExaminerMainForm.resx">
+      <DependentUpon>ExaminerMainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,6 +158,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\user-profile-icon-free-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check-Mark-Tick-Transparent-Clip-Art-PNG.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -63,6 +63,26 @@ namespace ProctorV_prototype.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Check_Mark_Tick_Transparent_Clip_Art_PNG {
+            get {
+                object obj = ResourceManager.GetObject("Check-Mark-Tick-Transparent-Clip-Art-PNG", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tick {
+            get {
+                object obj = ResourceManager.GetObject("tick", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_profile_icon_free_vector {
             get {
                 object obj = ResourceManager.GetObject("user-profile-icon-free-vector", resourceCulture);

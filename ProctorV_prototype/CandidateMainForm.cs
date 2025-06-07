@@ -14,7 +14,8 @@ namespace ProctorV_prototype
     {
         public CandidateMainForm()
         {
-            InitializeComponent();
+            InitializeComponent();            
         }
+        
     }
 }

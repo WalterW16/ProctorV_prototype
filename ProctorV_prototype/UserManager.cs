@@ -10,10 +10,11 @@ namespace UserManagment
 {
     internal class UserManager : IUserManager
     {
-        private User user = new User();
+        private User user;
         private IUserRepository userRepository;
         public UserManager() { 
             userRepository = new UserRepository();
+            user = new User();
         }
 
         public User GetUser()

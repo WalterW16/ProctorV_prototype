@@ -16,12 +16,14 @@ namespace ProctorV_prototype
         static void Main()
         {
             Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);        
+            Application.SetCompatibleTextRenderingDefault(false);     
+           
+            var userManager = GetUserManager();
+            RoleDispatcher roleDispatcher = new RoleDispatcher(userManager);
 
-            var currentUser = GetUserCredentials();
-            if (currentUser != null)
+            if (roleDispatcher.getMode() != null)
             {
-                if (currentUser.Role == "examiner")
+                if (roleDispatcher.getMode() == "examiner")
                 {
                     Application.Run(new ExaminerMainForm());
                     
@@ -32,14 +34,14 @@ namespace ProctorV_prototype
                 }
             }
         }
-        private static User GetUserCredentials()
+        private static IUserManager GetUserManager()
         {
             LoginForm loginForm = new LoginForm();
        
 
             if (loginForm.ShowDialog() == DialogResult.OK)
             {
-                return loginForm.CurrentUser;
+                return loginForm.manager;
             }
 
             return null;

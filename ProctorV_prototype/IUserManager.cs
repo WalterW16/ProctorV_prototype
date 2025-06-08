@@ -7,9 +7,9 @@ using System.Data.Sql;
 
 namespace UserManagment
 {
-    internal interface IUserManager
+     internal interface IUserManager
     {
-        User LoginUser (string username, string password);
-        User GetUser();
+         User LoginUser (string username, string password);
+         User GetUser();
     }
 }

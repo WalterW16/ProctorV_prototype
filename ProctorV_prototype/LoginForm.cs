@@ -14,19 +14,20 @@ namespace ProctorV_prototype
 {
     public partial class LoginForm : Form
     {
-        private IUserManager userManager = new UserManager(); 
-        internal User CurrentUser {  get;  set; }
+        internal IUserManager manager { set; get; }       
         public LoginForm()
         {
             InitializeComponent();
             this.DialogResult = DialogResult.Cancel;
+            manager = new UserManager();
         }
+       
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                CurrentUser = userManager.LoginUser(UserNameTextBox.Text, PasswordTextBox.Text);
+                manager.LoginUser(UserNameTextBox.Text, PasswordTextBox.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
             }
@@ -35,6 +36,8 @@ namespace ProctorV_prototype
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
      
     }
 }

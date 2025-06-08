@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
+            this.ProfileSubpanel = new System.Windows.Forms.Panel();
+            this.LogoutBtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.MyDataBtn = new System.Windows.Forms.Button();
+            this.ProfileBtn = new System.Windows.Forms.Button();
             this.StatisticSubpanel = new System.Windows.Forms.Panel();
             this.SeeStatButton = new System.Windows.Forms.Button();
             this.StatButton = new System.Windows.Forms.Button();
@@ -41,9 +46,10 @@
             this.ScheduleTestbutton = new System.Windows.Forms.Button();
             this.TestsButton = new System.Windows.Forms.Button();
             this.LogoPanel = new System.Windows.Forms.Panel();
-            this.MainPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.MainPanel = new System.Windows.Forms.Panel();
             this.panelSideMenu.SuspendLayout();
+            this.ProfileSubpanel.SuspendLayout();
             this.StatisticSubpanel.SuspendLayout();
             this.GroupSubpanel.SuspendLayout();
             this.TestSubpanel.SuspendLayout();
@@ -54,6 +60,8 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panelSideMenu.Controls.Add(this.ProfileSubpanel);
+            this.panelSideMenu.Controls.Add(this.ProfileBtn);
             this.panelSideMenu.Controls.Add(this.StatisticSubpanel);
             this.panelSideMenu.Controls.Add(this.StatButton);
             this.panelSideMenu.Controls.Add(this.GroupSubpanel);
@@ -68,6 +76,94 @@
             this.panelSideMenu.Name = "panelSideMenu";
             this.panelSideMenu.Size = new System.Drawing.Size(250, 553);
             this.panelSideMenu.TabIndex = 1;
+            // 
+            // ProfileSubpanel
+            // 
+            this.ProfileSubpanel.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.ProfileSubpanel.Controls.Add(this.LogoutBtn);
+            this.ProfileSubpanel.Controls.Add(this.button1);
+            this.ProfileSubpanel.Controls.Add(this.MyDataBtn);
+            this.ProfileSubpanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProfileSubpanel.Location = new System.Drawing.Point(0, 629);
+            this.ProfileSubpanel.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfileSubpanel.Name = "ProfileSubpanel";
+            this.ProfileSubpanel.Size = new System.Drawing.Size(229, 90);
+            this.ProfileSubpanel.TabIndex = 47;
+            // 
+            // LogoutBtn
+            // 
+            this.LogoutBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.LogoutBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LogoutBtn.FlatAppearance.BorderSize = 0;
+            this.LogoutBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LogoutBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.LogoutBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LogoutBtn.Location = new System.Drawing.Point(0, 45);
+            this.LogoutBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.LogoutBtn.Name = "LogoutBtn";
+            this.LogoutBtn.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.LogoutBtn.Size = new System.Drawing.Size(229, 45);
+            this.LogoutBtn.TabIndex = 2;
+            this.LogoutBtn.Text = "Log out";
+            this.LogoutBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LogoutBtn.UseVisualStyleBackColor = false;
+            this.LogoutBtn.Click += new System.EventHandler(this.LogoutBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(0, 45);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(229, 0);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Options";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // MyDataBtn
+            // 
+            this.MyDataBtn.BackColor = System.Drawing.Color.RoyalBlue;
+            this.MyDataBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MyDataBtn.FlatAppearance.BorderSize = 0;
+            this.MyDataBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MyDataBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.MyDataBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MyDataBtn.Location = new System.Drawing.Point(0, 0);
+            this.MyDataBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.MyDataBtn.Name = "MyDataBtn";
+            this.MyDataBtn.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
+            this.MyDataBtn.Size = new System.Drawing.Size(229, 45);
+            this.MyDataBtn.TabIndex = 0;
+            this.MyDataBtn.Text = "My data";
+            this.MyDataBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MyDataBtn.UseVisualStyleBackColor = false;
+            this.MyDataBtn.Click += new System.EventHandler(this.MyDataBtn_Click);
+            // 
+            // ProfileBtn
+            // 
+            this.ProfileBtn.BackColor = System.Drawing.Color.MidnightBlue;
+            this.ProfileBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProfileBtn.FlatAppearance.BorderSize = 0;
+            this.ProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProfileBtn.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.ProfileBtn.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ProfileBtn.Location = new System.Drawing.Point(0, 574);
+            this.ProfileBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.ProfileBtn.Name = "ProfileBtn";
+            this.ProfileBtn.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.ProfileBtn.Size = new System.Drawing.Size(229, 55);
+            this.ProfileBtn.TabIndex = 46;
+            this.ProfileBtn.Text = "Profile";
+            this.ProfileBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProfileBtn.UseVisualStyleBackColor = false;
+            this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
             // 
             // StatisticSubpanel
             // 
@@ -94,7 +190,7 @@
             this.SeeStatButton.Padding = new System.Windows.Forms.Padding(44, 0, 0, 0);
             this.SeeStatButton.Size = new System.Drawing.Size(229, 45);
             this.SeeStatButton.TabIndex = 0;
-            this.SeeStatButton.Text = " ";
+            this.SeeStatButton.Text = "View statistic";
             this.SeeStatButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SeeStatButton.UseVisualStyleBackColor = false;
             this.SeeStatButton.Click += new System.EventHandler(this.SeeStatButton_Click);
@@ -268,15 +364,6 @@
             this.LogoPanel.Size = new System.Drawing.Size(229, 184);
             this.LogoPanel.TabIndex = 0;
             // 
-            // MainPanel
-            // 
-            this.MainPanel.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.MainPanel.Location = new System.Drawing.Point(250, 0);
-            this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(687, 553);
-            this.MainPanel.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -289,6 +376,15 @@
             this.label1.Size = new System.Drawing.Size(227, 98);
             this.label1.TabIndex = 1;
             this.label1.Text = "ProctorV";
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(250, 0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(687, 553);
+            this.MainPanel.TabIndex = 2;
             // 
             // ExaminerMainForm
             // 
@@ -303,6 +399,7 @@
             this.Name = "ExaminerMainForm";
             this.Text = "ExaminerMainForm";
             this.panelSideMenu.ResumeLayout(false);
+            this.ProfileSubpanel.ResumeLayout(false);
             this.StatisticSubpanel.ResumeLayout(false);
             this.GroupSubpanel.ResumeLayout(false);
             this.TestSubpanel.ResumeLayout(false);
@@ -329,5 +426,10 @@
         private System.Windows.Forms.Panel LogoPanel;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel ProfileSubpanel;
+        private System.Windows.Forms.Button LogoutBtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button MyDataBtn;
+        private System.Windows.Forms.Button ProfileBtn;
     }
 }

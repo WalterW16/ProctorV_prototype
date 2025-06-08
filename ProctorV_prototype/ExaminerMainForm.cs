@@ -12,6 +12,25 @@ namespace ProctorV_prototype
 {
     public partial class ExaminerMainForm : Form
     {
+        private ScheduleTestForm scheduleTestForm;
+        private void ShowChildForm(Form form)
+        {
+            if (MainPanel.Controls.Count > 0)
+                MainPanel.Controls[0].Hide(); 
+
+            if (!MainPanel.Controls.Contains(form))
+            {
+                form.TopLevel = false;
+                form.FormBorderStyle = FormBorderStyle.None;
+                form.Dock = DockStyle.Fill;
+                MainPanel.Controls.Add(form);
+            }
+
+            form.Show();
+            form.BringToFront();
+        }
+
+
         public ExaminerMainForm()
         {
             InitializeComponent();
@@ -22,6 +41,7 @@ namespace ProctorV_prototype
             TestSubpanel.Visible = false;
             GroupSubpanel.Visible = false;
             StatisticSubpanel.Visible = false;
+            ProfileSubpanel.Visible = false;
         }
         private void hideSubMenu()
         {
@@ -31,6 +51,8 @@ namespace ProctorV_prototype
                 GroupSubpanel.Visible = false;
             if (StatisticSubpanel.Visible == true)
                 StatisticSubpanel.Visible = false;
+            if(ProfileSubpanel.Visible == true) 
+                ProfileSubpanel.Visible = false;
         }
         private void showSubMenu(Panel sub)
         {
@@ -53,6 +75,9 @@ namespace ProctorV_prototype
         private void ScheduleTestbutton_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            if(scheduleTestForm==null || scheduleTestForm.IsDisposed)
+                scheduleTestForm = new ScheduleTestForm();
+            ShowChildForm(scheduleTestForm);
         }
 
         private void ChangeParamButton_Click(object sender, EventArgs e)
@@ -85,5 +110,20 @@ namespace ProctorV_prototype
             hideSubMenu();
         }
 
+        private void ProfileBtn_Click(object sender, EventArgs e)
+        {
+            showSubMenu(ProfileSubpanel);
+        }
+
+        private void MyDataBtn_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+        }
+
+        private void LogoutBtn_Click(object sender, EventArgs e)
+        {
+            hideSubMenu();
+            this.Close();
+        }
     }
 }

@@ -98,12 +98,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CandidateFacade.cs" />
     <Compile Include="CandidateMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CandidateMainForm.Designer.cs">
       <DependentUpon>CandidateMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExaminerFacade.cs" />
     <Compile Include="ExaminerMainForm.cs">
       <SubType>Form</SubType>
     </Compile>

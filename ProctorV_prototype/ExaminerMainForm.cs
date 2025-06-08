@@ -12,6 +12,7 @@ namespace ProctorV_prototype
 {
     public partial class ExaminerMainForm : Form
     {
+        internal RoleDispatcher _roleDispatcher;
         private ScheduleTestForm scheduleTestForm;
         private void ShowChildForm(Form form)
         {
@@ -36,6 +37,13 @@ namespace ProctorV_prototype
             InitializeComponent();
             customizeDesign();
         }
+         internal ExaminerMainForm(RoleDispatcher roleDispatcher)
+        {
+            this._roleDispatcher = roleDispatcher;
+            InitializeComponent();
+            customizeDesign();
+        }
+
         private void customizeDesign()
         {
             TestSubpanel.Visible = false;

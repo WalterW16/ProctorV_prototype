@@ -12,12 +12,19 @@ namespace ProctorV_prototype
 {
     public partial class CandidateMainForm : Form
     {
+        private RoleDispatcher _roleDispatcher;
         public CandidateMainForm()
         {
             InitializeComponent();
             customizeDesign();
         }
-   
+        internal CandidateMainForm(RoleDispatcher roleDispatcher)
+        {
+            this._roleDispatcher = roleDispatcher;
+            InitializeComponent();
+            customizeDesign();
+        }
+
         private void customizeDesign()
         {
             ProfileSubPanel.Visible = false;

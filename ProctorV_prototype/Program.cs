@@ -25,12 +25,12 @@ namespace ProctorV_prototype
             {
                 if (roleDispatcher.getMode() == "examiner")
                 {
-                    Application.Run(new ExaminerMainForm());
+                    Application.Run(new ExaminerMainForm(roleDispatcher));
                     
                 }
                 else
                 {
-                    Application.Run(new CandidateMainForm());
+                    Application.Run(new CandidateMainForm(roleDispatcher));
                 }
             }
         }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UserRepo;
+using Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace UserManagment
@@ -28,13 +29,7 @@ namespace UserManagment
             {
                 if(userRepository.VerifyPassword(username, password))
                 {
-                    user.Username = username;
-                    user.Password = password;
-                    user.Email = userRepository.GetEmail(username);
-                    user.Phone_number = userRepository.GetPhoneNumber(username);
-                    user.Role = userRepository.GetRole(username);
-                    user.FirstName = userRepository.GetFirstname(username);
-                    user.LastName = userRepository.GetLastname (username);
+                    user = userRepository.GetUserByUsername(username);
                     return user;
                 }
                 else

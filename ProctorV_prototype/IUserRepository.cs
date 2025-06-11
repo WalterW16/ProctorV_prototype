@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Entities;
 
 namespace UserRepo
 {
@@ -15,5 +16,13 @@ namespace UserRepo
         string GetPhoneNumber(string username);
         string GetLastname(string username);
         string GetFirstname(string username);
+        string GetUserName(string phoneNumber, string firstName);
+        User GetUserByUsername(string username);
+        GroupOfCandidates GetGroupOfCandidates(string groupname);
+        List<string> GetGroupsName();
+        List<User>GetCandidates();
+        void AddGroup(string groupname);
+        void RemoveGruop(string groupname);
+        void UpdateGroup(GroupOfCandidates group);
     }
 }

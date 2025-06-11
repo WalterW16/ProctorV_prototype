@@ -98,12 +98,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActionRequest.cs" />
+    <Compile Include="ActionResult.cs" />
+    <Compile Include="ActionType.cs" />
     <Compile Include="CandidateFacade.cs" />
     <Compile Include="CandidateMainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CandidateMainForm.Designer.cs">
       <DependentUpon>CandidateMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateGroupForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateGroupForm.Designer.cs">
+      <DependentUpon>CreateGroupForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ExaminerFacade.cs" />
     <Compile Include="ExaminerMainForm.cs">
@@ -112,6 +121,9 @@
     <Compile Include="ExaminerMainForm.Designer.cs">
       <DependentUpon>ExaminerMainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GroupManager.cs" />
+    <Compile Include="GroupOfCandidates.cs" />
+    <Compile Include="IGroupManager.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +146,9 @@
     <Compile Include="UserRepository.cs" />
     <EmbeddedResource Include="CandidateMainForm.resx">
       <DependentUpon>CandidateMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateGroupForm.resx">
+      <DependentUpon>CreateGroupForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ExaminerMainForm.resx">
       <DependentUpon>ExaminerMainForm.cs</DependentUpon>

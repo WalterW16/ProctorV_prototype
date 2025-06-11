@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using ProctorV_prototype.Messages;
 
 namespace ProctorV_prototype
 {
@@ -14,6 +15,7 @@ namespace ProctorV_prototype
     {
         internal RoleDispatcher _roleDispatcher;
         private ScheduleTestForm scheduleTestForm;
+        private CreateGroupForm createGroupForm;
         private void ShowChildForm(Form form)
         {
             if (MainPanel.Controls.Count > 0)
@@ -84,7 +86,7 @@ namespace ProctorV_prototype
         {
             hideSubMenu();
             if(scheduleTestForm==null || scheduleTestForm.IsDisposed)
-                scheduleTestForm = new ScheduleTestForm();
+                scheduleTestForm = new ScheduleTestForm(_roleDispatcher);
             ShowChildForm(scheduleTestForm);
         }
 
@@ -101,6 +103,9 @@ namespace ProctorV_prototype
         private void CreateGroupButton_Click(object sender, EventArgs e)
         {
             hideSubMenu();
+            if (createGroupForm == null || createGroupForm.IsDisposed)
+                createGroupForm = new CreateGroupForm(_roleDispatcher);
+            ShowChildForm(createGroupForm);
         }
 
         private void GroupOptButton_Click(object sender, EventArgs e)

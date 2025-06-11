@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace UserManagment
+namespace Entities
 {
     internal class User
     {
@@ -16,6 +16,7 @@ namespace UserManagment
         private string lastName;
         private string phone_number;
         private string role;
+        
         public User() {
             username = "User";
             firstName = "noName";
@@ -47,7 +48,9 @@ namespace UserManagment
             this.phone_number = obj.phone_number;
             this.role = obj.role;
         }
-        public User GetThis()
+    
+
+         public User GetThis()
         {
             return this;
         }

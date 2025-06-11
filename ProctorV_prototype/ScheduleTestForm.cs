@@ -12,9 +12,15 @@ namespace ProctorV_prototype
 {
     public partial class ScheduleTestForm : Form
     {
+        private RoleDispatcher _roleDispatcher;
         public ScheduleTestForm()
         {
             InitializeComponent();
+        }
+        internal ScheduleTestForm( RoleDispatcher RoleDispatcher)
+        {
+            InitializeComponent();
+            _roleDispatcher = RoleDispatcher;
         }
     }
 }

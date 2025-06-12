@@ -48,12 +48,14 @@
             this.LogoPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.ProfileSubpanel.SuspendLayout();
             this.StatisticSubpanel.SuspendLayout();
             this.GroupSubpanel.SuspendLayout();
             this.TestSubpanel.SuspendLayout();
             this.LogoPanel.SuspendLayout();
+            this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -380,11 +382,23 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.MainPanel.Controls.Add(this.label2);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(250, 0);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(687, 553);
             this.MainPanel.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Gadugi", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(126, 234);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(455, 95);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Workspace";
             // 
             // ExaminerMainForm
             // 
@@ -405,6 +419,8 @@
             this.TestSubpanel.ResumeLayout(false);
             this.LogoPanel.ResumeLayout(false);
             this.LogoPanel.PerformLayout();
+            this.MainPanel.ResumeLayout(false);
+            this.MainPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -431,5 +447,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button MyDataBtn;
         private System.Windows.Forms.Button ProfileBtn;
+        private System.Windows.Forms.Label label2;
     }
 }

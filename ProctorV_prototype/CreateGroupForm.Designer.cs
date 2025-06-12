@@ -63,11 +63,13 @@
             // 
             // CandidatesListBox
             // 
+            this.CandidatesListBox.Font = new System.Drawing.Font("Corbel", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.CandidatesListBox.FormattingEnabled = true;
-            this.CandidatesListBox.ItemHeight = 23;
+            this.CandidatesListBox.ItemHeight = 28;
             this.CandidatesListBox.Location = new System.Drawing.Point(65, 133);
             this.CandidatesListBox.Name = "CandidatesListBox";
-            this.CandidatesListBox.Size = new System.Drawing.Size(564, 349);
+            this.CandidatesListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.CandidatesListBox.Size = new System.Drawing.Size(564, 340);
             this.CandidatesListBox.TabIndex = 2;
             // 
             // label2
@@ -112,6 +114,7 @@
             this.SubmitBtn.TabIndex = 6;
             this.SubmitBtn.Text = "Create";
             this.SubmitBtn.UseVisualStyleBackColor = false;
+            this.SubmitBtn.Click += new System.EventHandler(this.SubmitBtn_Click);
             // 
             // button1
             // 
@@ -123,8 +126,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(261, 45);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Cancel";
+            this.button1.Text = "Leave";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CreateGroupForm
             // 

@@ -12,7 +12,7 @@ namespace ProctorV_prototype.Core
     {
         void CreateGroup(string name);
         void AddCandidateToGroup(string username, string groupName);
-        List<User> GetUsers();
+        List<User> GetCandidates();
         void RemoveCandidate(string username, string groupName);
         void RemoveGroup(string name);
         void SaveAllGroups();

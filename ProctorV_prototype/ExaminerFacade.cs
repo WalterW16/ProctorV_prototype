@@ -1,4 +1,5 @@
 ﻿using Entities;
+using Org.BouncyCastle.Tls;
 using ProctorV_prototype.Messages;
 using System;
 using System.Collections.Generic;
@@ -30,15 +31,34 @@ namespace ProctorV_prototype.Core
         }
         private ActionResult CreateGroup(ActionRequest request)
         {
-            return new ActionResult();
+            ActionResult result = new ActionResult();
+           try
+            {
+                string name = request.Parameters["Name"] as string;
+                List<string> usernames = request.Parameters["Selected"] as List<string>;    
+                _groupManager.CreateGroup(name);
+                foreach (var h in usernames)
+                    _groupManager.AddCandidateToGroup(h, name);
+                result.Success = true;
+            }
+            catch (Exception ex) {
+                result.Success=false;
+                throw ex;
+            }
+            return result;
         }
         private ActionResult ShowAvailableCandidates(ActionRequest request)
         {
-            List<User> cand = _groupManager.GetUsers();
+            List<User> cand = _groupManager.GetCandidates();
+            List<Tuple<string, string, string>> UserInfo = new List<Tuple<string, string, string>>();
+            foreach (var user in cand) {
+                UserInfo.Add(new Tuple<string, string, string>(user.Username, user.FirstName, user.LastName));
+            }
             ActionResult result = new ActionResult();
             result.Success = true;
-            result.info.Add("List", cand);    
+            result.info.Add("List", UserInfo);    
             return result;
         }
+       
     }
 }

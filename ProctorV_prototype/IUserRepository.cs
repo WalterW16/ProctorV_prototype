@@ -22,7 +22,7 @@ namespace UserRepo
         List<string> GetGroupsName();
         List<User>GetCandidates();
         void AddGroup(string groupname);
-        void RemoveGruop(string groupname);
+        void RemoveGroup(string groupname);
         void UpdateGroup(GroupOfCandidates group);
     }
 }

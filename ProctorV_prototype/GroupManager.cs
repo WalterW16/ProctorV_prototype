@@ -14,7 +14,7 @@ namespace ProctorV_prototype.Core
        
         public GroupManager() 
         {
-            IUserRepository userRepository = new UserRepository();
+             _userRepository = new UserRepository();
 
         }
 
@@ -46,10 +46,7 @@ namespace ProctorV_prototype.Core
             }
         }
 
-        public List<User> GetUsers()
-        {
-            throw new NotImplementedException();
-        }
+        public List<User> GetCandidates() => _userRepository.GetCandidates();
 
         public void RemoveCandidate(string username, string groupName)
         {
@@ -69,7 +66,7 @@ namespace ProctorV_prototype.Core
         {
             if (_userRepository.GetGroupsName().Contains(name))
             {
-                _userRepository.RemoveGruop(name);
+                _userRepository.RemoveGroup(name);
             }
             else
             {

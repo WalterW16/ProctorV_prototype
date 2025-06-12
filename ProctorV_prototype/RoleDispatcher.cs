@@ -15,7 +15,7 @@ namespace ProctorV_prototype
         {
             _userManager = manager;
             mode = _userManager.GetUser().Role;
-            
+            Efacade = new ExaminerFacade();
             Cfacade = new CandidateFacade();
         }        
         public string getMode()

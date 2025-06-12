@@ -27,7 +27,7 @@ namespace Entities
             role = "unknown";
         }
 
-        public User(string username, string password, string email, string firstName, string lastName, string phone_number, string role)
+        public User(string username, string password, string email, string phone_number, string firstName, string lastName,  string role)
         {
             Username = username;
             Password = password;

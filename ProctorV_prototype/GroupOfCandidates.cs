@@ -20,6 +20,7 @@ namespace Entities
             this.name=name;
             this.candidates = new List<User>();
         }
+        
         public void AddCandidate(User candidate)
         {
             this.candidates.Add(candidate);
@@ -39,6 +40,10 @@ namespace Entities
         public string GetName()
         {
             return name;
+        }
+        public List<User> GetCandidates()
+        { 
+            return candidates;
         }
     }
 }

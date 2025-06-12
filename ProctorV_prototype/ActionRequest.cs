@@ -10,6 +10,11 @@ namespace ProctorV_prototype.Messages
     public class ActionRequest
     {
         public ActionType Action {  get; set; }
-        public Dictionary<string, object> Parameters { get; }
+        public Dictionary<string, object> Parameters { get; set; }
+        public ActionRequest()
+        {
+            Parameters = new Dictionary<string, object>();
+        }
     }
+
 }
